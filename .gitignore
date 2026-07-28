@@ -1,0 +1,24 @@
+node_modules/
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+.vscode/*
+!.vscode/extensions.json
+.idea
+
+# Scratch from the site scrape — the useful artefacts (source images,
+# WP page + media JSON) are kept under raw/ as provenance for
+# CONTENT-INVENTORY.md; these were just fetch by-products.
+raw/*.html
+raw/media_hdr.txt
+raw/imgurls.txt
