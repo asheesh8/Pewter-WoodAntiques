@@ -25,6 +25,21 @@ Output lands in `app/dist/` — a static bundle that can go on any host.
 Point the host's SPA fallback at `index.html` so deep links like
 `/collection/pw-002` resolve.
 
+### Deploying
+
+The app lives in `app/`, not at the repo root, so a default import will
+find nothing to build and serve a 404. Two `vercel.json` files cover both
+setups — you only need whichever matches your project's **Root Directory**:
+
+| Root Directory setting | File used | What it does |
+|---|---|---|
+| `.` (default) | `/vercel.json` | builds from `app/`, outputs `app/dist`, adds the SPA rewrite |
+| `app` | `/app/vercel.json` | Vercel auto-detects Vite; this just adds the SPA rewrite |
+
+Both are committed, so either works without further configuration. The
+rewrite (`/(.*)` → `/index.html`) is what makes deep links resolve;
+Vercel checks the filesystem first, so real assets are unaffected.
+
 ---
 
 ## Stack
