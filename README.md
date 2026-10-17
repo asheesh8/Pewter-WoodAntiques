@@ -9,6 +9,8 @@ what was missing at the source.
 
 ---
 
+**Live:** https://pewter-wood-antiques.vercel.app · **Stack:** Vite + React + TypeScript single-page app in `app/`; inventory in `app/src/data/inventory.ts`. Static build — no server code and no environment variables.
+
 ## Run it
 
 ```bash
